@@ -36,15 +36,13 @@ header {
 
 .produtos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
   gap: 20px;
   padding: 40px;
-  width: auto;
-  height: auto;
 }
 
 .produto {
+  width: calc(50%-20px);
+  margin-bottom: 40px;
   padding: 20px;
   background-color: #f9f9f9;
 }
@@ -70,3 +68,19 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+
+@media screen and (max-width: 768px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .produtos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
